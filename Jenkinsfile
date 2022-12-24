@@ -5,7 +5,7 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("mbr3d4/rotten-potatoes", '-f ./src/Dockerfile ./src')
+                    dockerapp = docker.build("mbr3d4/rotten-potatoes:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
                 }
             }
         }
