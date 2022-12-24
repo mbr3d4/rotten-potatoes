@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage ('Inicial') {
+        stage ('Build Image') {
             steps {
-                echo 'Iniciando a pipeline teste'
+                script {
+                    dockerapp = docker.build("mbr3d4/rotten-potatoes", '-f ./src/Dockerfile ./src')
+                }
             }
         }
     }
