@@ -49,7 +49,7 @@ spec:
     spec:
       containers:
       - name: movies
-        image: fabricioveronez/rotten-potatoes:v1
+        image: mbr3d4/rotten-potatoes:1
         ports:
           - containerPort: 5000
         env:
